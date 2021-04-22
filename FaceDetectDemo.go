@@ -50,7 +50,7 @@ func FindFaces(camera *gocv.VideoCapture, window *gocv.Window, faceFiindingNet g
 			textLocY := rectangle.Max.Y - (rectangle.Max.Y-rectangle.Min.Y)/2 - textsize.Y/2
 			textLoc := image.Pt(textLocX, textLocY)
 			gocv.Rectangle(&img, rectangle, colornames.Darkkhaki, 3)
-			gocv.PutText(&img, "Redacted", textLoc, gocv.FontHersheyDuplex, 1.5, colornames.Red, 2)
+			gocv.PutText(&img, "Brenner", textLoc, gocv.FontHersheyDuplex, 1.5, colornames.Red, 2)
 		}
 		window.IMShow(img)
 		if window.WaitKey(10) >= 0 {
